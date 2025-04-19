@@ -1,0 +1,19 @@
+{
+  "id": "andrewschroeder42/birdclef-2025-inference",
+  "title": "BirdCLEF 2025 Inference",
+  "code_file": "efficientnet-b0-pytorch-inference-birdclef-25.ipynb",
+  "language": "python",
+  "kernel_type": "notebook",
+  "is_private": false,
+  "enable_gpu": false,
+  "enable_internet": false,
+  "dataset_sources": [
+    "andrewschroeder42/birdclef-weights"
+  ],
+  "competition_sources": [
+    "birdclef-2025"
+  ]
+  
+}
+
+kaggle kernels pull andrewschroeder42/birdclef-2025-inference

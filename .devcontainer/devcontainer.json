@@ -1,0 +1,37 @@
+{
+    "name": "Kaggle Dev CPU",
+    "image": "gcr.io/kaggle-images/python", //Remember to pull the latest before rebuilding
+    
+    "extensions": [
+        "ms-python.python",
+        "ms-python.vscode-pylance",
+        // Editing/dev process
+        "streetsidesoftware.code-spell-checker",
+        "wayou.vscode-todo-highlight",
+        "janisdd.vscode-edit-csv",
+        "davidanson.vscode-markdownlint",
+        // VCS helpers
+        "donjayamanne.githistory",
+        "eamodio.gitlens"
+    ],
+
+    "settings": {
+        "terminal.integrated.shell.linux": "/bin/bash",
+        "python.pythonPath": "/opt/conda/bin/python" // Update this to your path
+
+    },
+    "devPort":8888,
+    "shutdownAction": "none",
+
+    "mounts": [
+        "type=bind,source=${localWorkspaceFolder}/kaggle/input,target=/kaggle/input",
+        "type=bind,source=${localWorkspaceFolder}/kaggle/output,target=/kaggle/output"
+    ],
+
+    "postCreateCommand": ".devcontainer/setup.sh",
+    "postAttachCommand": ".devcontainer/setup-mounted.sh",
+
+    "containerEnv": {
+        "KAGGLE_MODE": "DEV"
+    }
+}
